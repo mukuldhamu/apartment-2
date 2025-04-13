@@ -1,0 +1,63 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+
+	<title>Buy Apartment</title>
+</head>
+	<body>
+<table>
+	<tr>
+		<th>
+			<font color="#EB586F" face="" size="6">
+				<h2> Buy Now* </h2>
+			</font>
+		</th>
+	</tr>
+	<tr>
+		<td>
+					<form name="input" action="/shop/orders/" method="post" >
+						{% csrf_token %}
+				 		<fieldset border="0">
+							<font color="black" face="Telugu sangam MN" size="4">
+								<h4>Enter the owner details:</h4>
+
+										Owner_First_Name:
+											<input type="text" name = 'owner_first_name'>
+
+										Owner_Last_Name:<input type="text" name="owner_last_name"><br>
+										Owner_Email:<input type="text" name="owner_email"><br>
+										Owner_Contact_No:<input type="text" name="owner_contact_no"><br>
+
+								<h4>enter the customer details:</h4>
+
+										Customer_First_Name:
+								<input type="text" name = 'cust_first_name'>
+
+                                Customer_Last_Name:<input type="text" name="cust_last_name"><br>
+                                Customer_Email:<input type="text" name="cust_email"><br>
+                                Customer_Contact_No:<input type="text" name="cust_contact_no"><br>
+
+								<h4>Enter Your Apartment description:</h4>
+								Appt_Description:
+								<input type="text" name = 'appt_desc'>
+
+
+
+                                <button type="submit" >save</button>
+											<input type="Reset" ><br>
+							</font>
+						</fieldset>
+					</form>
+
+			</td>
+
+	</tr>
+</table>
+ <p class="copyright-text">All copyrights reserved © 2019 - Designed &amp; Developed by
+ 	<a rel="nofollow" href="https://google.com">Apartment Rentz</a>
+ </p>
+
+
+</body>
+</html>

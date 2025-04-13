@@ -1,0 +1,74 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+
+	<title>Buy Apartment</title>
+
+    </script>
+</head>
+	<body textaligne="center">
+	{% include 'header.html' %}
+<center>
+<table>
+	<tr>
+		<th>
+			<font color="#EB586F" face="" size="6">
+				<h2> Property details*</h2>
+			</font>
+		</th>
+	</tr>
+	<tr>
+		<td>
+					<form name="input" method="POST" action="/app1/property_details/" >
+                                   {% csrf_token %}
+				 		<fieldset border="0">
+							<font color="black" face="Telugu sangam MN" size="4">
+
+								<h4>Enter Email:</h4>
+                                         Email: <input type="email" name="Email/Username" placeholder="previous email"  required><br>
+
+								<h4>Enter :</h4>
+                                         ID: <input type="text" name="uname" placeholder="Enter username"required><br>
+								<h4>Enter Address To find Apartments:</h4>
+
+										State:
+											<input type="text" name="state" placeholder="state" required><br>
+										City:<input type="text" name="city" placeholder="Enter city" required><br>
+
+								<h4>Choose Your Budget</h4>
+
+										Range:
+											<input type="text" name="price_range" placeholder="price_range"required><br><br>
+								<h4>Enter Your Apartment choice:</h4>
+												<input type="text" name="flat_type" placeholder="1,2,3,4 BHK" required><br><br>
+								<h5>Possession</h5>
+								                <input type="text" name="possession" placeholder="possession" required><br><br>
+
+								<h5>Enter Contact Details</h5>
+								Firstname:<input type="text" name="first_name" placeholder="First Name" required><br>
+								Lastname:<input type="text" name="last_name" placeholder="Last Name" required><br>
+                                     Mob.No:<input type="text" name="contact_no" placeholder="mobile no." pattern="/(7|8|9|6)\d{9/}" title="Please Enter valid mobile number" required><br><br>
+                                <h5>Add Apartment and Rooms Image</h5>
+                                    <input type="file" >
+                                 <h5>Description</h5>
+								<textarea type="text" height="50%" width="10" name="description" placeholder="description" required></textarea><br>
+
+								<a href="/app1/property_details/"><input type="submit" ></a>
+											<input type="Reset" >
+
+							</font>
+						</fieldset>
+
+					</form>
+
+			</td>
+	</tr>
+</table></center>
+
+{% include 'footer.html' %}
+
+
+</body>
+</html>

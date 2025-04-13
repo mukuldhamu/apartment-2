@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+<head>
+<title>form</title>
+
+
+<link rel="stylesheet" type="text/css" href='{% static "css\style.css"%}' />
+
+
+</head>
+
+<body background='{% static "img\images1\bg1.jpg"%}'>
+
+{% include 'header.html'%}
+<div class="img" >
+    <form action="/notifications/notify/" method="post" >
+     {% csrf_token %}
+   <div class="class1">
+   <h1>Form</h1>
+   <div class="layout1">
+       <label for="name"><b>Name:</b></label>
+       <input type="text" size="35" placeholder="Enter Your Name" name="name" required>
+
+      <label for="contact_no"><b>Contact_No.</b></label>
+      <input style="border-radius: 4px" type="text" size="15" placeholder="Enter Your Contact_No." name="contact_no" required>
+ <label for="address"><b>Address</b></label>
+      <input style="border-radius: 4px" type="text"  placeholder="Enter Your Address" name="address" required>
+
+ <label for="0_id"><b>Email</b></label>
+      <input style="border-radius: 4px" type="text"  placeholder="Enter Email " name="uname" required>
+
+
+
+       <button style="border-radius: 4px" type="submit">submit</button>
+       <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+
+    <button type="reset" class="can_btn">Reset</button>
+
+  </div>
+  </form>
+</div>
+
+
+</body>
+{% include 'footer.html'%}
+
+</html>

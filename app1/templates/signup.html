@@ -1,0 +1,106 @@
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <meta charset="UTF-8">
+    <title>{% block title %} SignUp{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style1.css' %}"  />
+</head>
+<body background="{% static 'img/images1/bg1.jpg' %}">
+
+
+{% block content %}
+<header style="position:fixed;z-index:100;width:100%;height: 70px;
+border-bottom:10px ridge brown;">
+<div class="heading">
+<div class="title">
+<h1><span class="highlight">Apartment</span> RentZ</h1>
+<p>chal chla chal</p>
+</div>
+
+</div>
+
+</header>
+<br><br><br><br><br><br><br><br><br>
+
+<div>
+<p class="para1"> "All achievements, all earned riches, have their beginning in an idea."<b> - Napoleon Hill</b></p>
+
+
+<div class="img">
+
+
+
+	 <div class="size_form">
+<form action="/app1/signup/" method = 'POST' style=" width:100%">
+    {% csrf_token %}
+  <div class="class1">
+    <h1>Create an account</h1>
+    <p><b>It's free and always will be.</b></p>
+    <hr>
+    <div class="layout1">
+     <table>
+	 <tr>
+	 <td>
+      <span style="float:left; width: 100%;">
+          <input   type="text" placeholder="First Name" name="first_name" class="form-first-name" pattern="[A-Z].*" title="first alphabet must be capital"/></span>
+		 </td>
+		 <td>
+       <span style="float:right; width: 100%;">
+           <input placeholder="Last Name"
+		   type="text" name="last_name" class="form-last-name" pattern="[A-Z].*" title="first alphabet must be capital"/></span>
+           </td>
+		  </tr>
+    </table>
+
+        <input type="text" placeholder="Enter Email/contact" name="email" pattern="\w[a-zA-Z0-9]*@(gmail|yahoo|rediffmail|outlook|gmx|icloud)\.(com|in|can)) " title="forexample@gmail.com" required>
+    <input type="password" placeholder="Enter Password" name="psw" pattern=".{5,15}" title="chartcters minimum 5 max 15" required>
+
+    <input type="password" placeholder="Confirm Password" name="conf_psw" pattern=".{5,15}" title="chartcters minimum 5 max 15" required>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    <button type="reset" class="can_btn">Reset</a></button>
+    <p>By creating an account you agree to our <a href="/app1/privacy/" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+
+     <div class="sign_up">
+
+         <button type="submit" class="signupbtn" ><a href="#">Sign Up</a></button>
+
+	 <div style="float:left; width:44%;"><hr/></div>
+	 <div style="float:right; width:44%;"><hr/></div>
+	 </br><br>
+    </div>
+	</div>
+<!--
+   <table>
+   <tr>
+   <td>
+   <a href="https://en-gb.facebook.com" class="fa fa-facebook"><b>facebook</b></a>
+   </td><td>
+  <a href="https://twitter.com/?lang=en-gb" class="fa fa-twitter"><b>twitter</b>
+  </td>
+  </tr></table>  -->
+  </div>
+  </a>
+</form></div>
+</div>
+    <HR WIDTH=70% COLOR=BROWN HEIGHT=2PX ALIGN=LEFT>
+<div>
+    {% for message in messages %}
+    <h3> {{message}}</h3>
+    {% endfor %}
+
+
+</body>
+{% endblock %}
+{% include 'footer.html'%}
+
+</html>

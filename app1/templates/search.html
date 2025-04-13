@@ -1,0 +1,56 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+
+	<title>Search apartment</title>
+</head>
+	<body>
+	{% include 'header.html' %}
+	{% csrf_token %}
+	<center>
+<table>
+	<tr>
+		<th>
+			<font color="#EB586F" face="" size="6">
+				<h2> Search Now* </h2>
+			</font>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<form name="input" method="post" action="/app1/search/" >
+						{% csrf_token %}
+				 		<fieldset border="0">
+							<font color="brown" face="Telugu sangam MN" size="4">
+
+								<h4>Enter Address To find Apartments:</h4>
+
+										State:
+											<input type="text" name="state" placeholder="state"><br>
+										City:<input type="text" placeholder="Apartment location" name="city"><br>
+
+								<h4>Choose Your Budget</h4>
+
+										Range:
+											<input type="text" name="price_range" placeholder="price_range"><br>
+								<h4>Enter Your Apartment choice:</h4>
+													<input type="text" name="flat_type" placeholder="1,2,3,4 BHK" ><br><br>
+								<h5>Possession</h5>
+								<input type="text" name="possession" placeholder="possession"></br>
+
+											<input type="submit" >
+											<input type="Reset" ><br>
+							</font>
+						</fieldset>
+					</form>
+
+			</td>
+	</tr>
+</table>         </center>
+
+   {% include 'footer.html' %}
+
+</body>
+</html>

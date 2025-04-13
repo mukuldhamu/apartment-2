@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+
+</head>
+<body>
+<p style="background-image:url('img/images1/testimonial-bg.jpg')"></p>
+{% include 'header.html' %}
+    <center >
+{% block body %}
+{% load static %}
+    <font color="#EB586F" size="3" >
+        <!-- pending -->
+        {% if user.is_authenticated %}
+        <h1 class="my-4" align="center"> Profile page </h1>
+        <h1 class="my-4" align="center"> Username : {{user.get_username}} </h1>
+        {% endif %}
+    </font>
+
+
+
+
+<fieldset align="right">
+    <!--<a href="/app1/change_password/"><input type="button" value="Update Password" /></a>-->
+    <a href="/app1/property_details/"><input type="button" value="Upload Property" /></a>
+         <a href="/app1/logout/"> <input type="button" value="logout" > </a><br><br>
+    {% for result in result %}
+         <label for="uname">ID :<p class="card-text"><b>{{result.uname}}</b></p></label>
+    </fieldset>
+    <!--<img src='/media/{{i.image}}' class="card-img-top" alt="..."> -->
+
+
+
+                <form action="/app1/Property_details/" method="POST">
+
+                    <font color="#EB586F" size="5"><h3 align="left"><b>HELLO {{result.first_name}} {{result.last_name}}</b>: </h3></font>
+<font color="#EB586F" size="5"><h3 align="left"> Your Properties Details: </h3></font>
+<br><br><br>
+                    <filedset aligncenter="200" >
+                        <table>
+                            <th><ol><li><label for="uname">ID :<p class="card-text"><b>  {{result.uname}}</b></p></label><br></li></ol>
+                                <ol><li><label for="first_name">Name: <p class="card-text"><b>  {{result.first_name}} {{result.last_name}}</b></p></label></li></ol>
+
+                                <ol><li><label for="contact_no"> Contact: <ol><li><p class="card-text"><b>  {{result.contact_no}}</b></p></label></li></ol>
+                                <ol><li><label for="flat">Flat Type: <p class="card-text"><b>   {{result.flat_type}}</b></p></label><br></li></ol>
+                           <ol><li><label for="city">City: <p class="card-text"><b> {{result.city}}</b></p></label><br></li></ol>
+                           <ol><li><label for="description">Description : <p class="card-text"><b>  {{result.description}}</b></p></label></li></ol>
+                           <ol><li><label for="possession">possession:  <p class="card-text"><b>    {{result.possession}}</b></p></label> </li></ol>
+                                <ol><li>Images : <img src="/Media/{{result.img}}"/><br></li></ol>
+
+                            </th>
+                        </table>
+                        {% endfor %}
+                            <br>
+
+                    </filedset>
+                </form>
+    <frame align="laft">
+        <form>
+            <fieldset >
+
+                {% for i in notifications %}
+                <font color="#EB586F" size="5"> <h2 align="left "> Notifications: </h2></font><br/>
+                <font color="#EB586F" size="5"> <h3 align="left "> {{i.title}} </h3></font>
+                <font color="#EB586F" size="5"> <h3 align="left "> {{i.message}} </h3></font>
+                <HR WIDTH=70% COLOR=BROWN HEIGHT=2PX ALIGN=LEFT>
+                {% endfor %}
+            </fieldset>
+
+            <fieldset >
+
+{% for i in notifications1 %}
+                <font color="#EB586F" size="5"> <h2 align="left "> Apartment Purchase Requests: </h2></font><br/>
+                 <HR WIDTH=70% COLOR=BROWN HEIGHT=2PX ALIGN=LEFT>
+
+
+
+                <font color="#EB586F" size="5"> <h3 align="left ">Name:  {{i.name}} </h3></font>
+                <font color="#EB586F" size="5"> <h3 align="left ">Contact_no:  {{i.contact_no}} </h3></font>
+                <font color="#EB586F" size="5"> <h3 align="left ">Address:  {{i.address}} </h3></font>
+                <a href="/app1/approve/"><input type="button" class="signupbtn" value="approve"></input></a>
+                    <HR WIDTH=100% COLOR=BROWN HEIGHT=2PX ALIGN=LEFT>
+                {% endfor %}
+            </fieldset>
+
+        </form>
+    </frame>
+</center>
+{% endblock %}
+{% include 'footer.html' %}
+
+</body>
+</html>

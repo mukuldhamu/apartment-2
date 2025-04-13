@@ -1,0 +1,73 @@
+{% load static %}
+<html>
+<head>
+<title>login</title>
+
+<meta name = "description" content =
+        "It is simple source through which student
+can get enginnering notes easliy and systematically."/>
+<meta name="keywords" content="Engineering notes,notes, notes of enginnering "/>
+<meta  name="author" content="pawan tiwari"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
+<link rel="stylesheet" type="text/css" href='{% static "css\style.css"%}' />
+
+
+</head>
+
+<body background='{% static "img\images1\bg1.jpg"%}'>
+
+<header style="position:fixed;z-index:100;width:100%;
+border-bottom:10px ridge brown;">
+<div class="heading">
+<div class="title">
+<h1><span class="highlight">Apartment</span> RentZ</h1>
+<p>chal chla chal</p>
+</div>
+
+</div>
+</header>
+<br><br><br><br><br><br><br><br><br>
+
+<div>
+
+<p class="para1"> "All achievements, all earned riches, have their beginning in an idea."<b> - Napoleon Hill</b></p>
+</div>
+
+<div class="img" >
+
+
+
+ <form action="/app1/login2/" method="post" >
+     {% csrf_token %}
+   <div class="class1">
+   <h1>Login</h1>
+   <div class="layout1">
+       <label for="email"><b>Email</b></label>
+       <input type="text" size="35" placeholder="Enter Username" name="email" pattern="\w[a-zA-Z0-9]*@(gmail|yahoo|rediffmail|outlook|gmx|icloud)\.(com|in|can)) " title="forexample@gmail.com"required>
+
+      <label for="psw"><b>Password</b></label>
+      <input style="border-radius: 4px" type="password" size="6" placeholder="Enter Password" name="psw" required>
+
+       <button style="border-radius: 4px" type="submit">Login</button>
+	  </div>
+     <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+
+    <button type="reset" class="can_btn">Reset</button>
+    <span class="psw">Forgot <a href="/app1/change_password/">password?</a></span>
+
+  </div>
+  </form>
+</div>
+
+
+</body>
+{% include 'footer.html'%}
+
+</html>

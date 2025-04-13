@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>output</title>
+</head>
+<body>
+{% include 'header.html' %}
+{% block body %}
+{% load static %}
+<center>
+<center class="container" >
+{% csrf_token %}
+   <h1 class="my-4" align="center">SEARCH RESULT </h1>
+
+{% for i in result %}
+    <!--<img src='/media/{{i.image}}' class="card-img-top" alt="..."> -->
+                       <table ><th>
+                                <td><ol><li>Owner name</li></ol></td>
+                           <td><ol><li>Last name</li></ol></td>
+                           <td><ol><li>Contact</li></ol></td>
+                           <td><ol><li></li>Flat Type</ol></td>
+                           <td><ol><li>State</li></ol></td>
+                           <td><ol><li>Image</li></ol></td>
+
+                           <td><ol><li>City</li></ol></td>
+                           <td><ol><li>Description</li></ol></td>
+                           <td><ol><li>possession</li></ol></td>
+                           <td><ol><li>Buy now</li></ol></td>
+                       </th>
+
+                           <tr><td>
+
+                               <td> <ol><li>  <p class="card-text">{{i.first_name}}</p></li></ol></td>
+                               <td><ol><li><p class="card-text">{{i.last_name}}</p></li></ol></td>
+                               <td>  <ol><li><p class="card-text">{{i.contact_no}}</p></li></ol></td>
+                               <td> <ol><li><p class="card-text">{{i.flat_type}}</p></li></ol></td>
+                               <td> <ol><li><p class="card-text">{{i.state}}</p></li></ol></td>
+                               <td> <ol><li><img src="/Media/{{i.img}}"/></li></ol></td>
+
+                           <td><ol><li> <p class="card-text">{{i.city}}</p></li></ol></td>
+                           <td><ol><li><p class="card-text">{{i.description}}</p></li></ol></td>
+                           <td>  <ol><li>  <p class="card-text">{{i.possession}}</p></li></ol></td>
+                               <td>   <ol><li>  <a href="/app1/login2/"> <button>Book NOw</button></li></ol></td></tr>
+                       </table>
+    <style>
+        table,td{
+        color: blue;
+        padding-left:10px;
+        padding-right:10px;
+        background-color:lightblue;
+        font-size:10px;
+        border-color:groove brown;
+        border-radius:5px;
+        border-style:groove;
+        border-collapse:collapse;
+        font-color: white;
+        }
+    </style>
+
+                      {% endfor %}
+</center>
+    {% endblock %}
+
+{% include 'footer.html' %}
+</body>
+</html>

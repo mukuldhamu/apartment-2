@@ -1,0 +1,346 @@
+body{
+	width:auto;
+margin:0px;
+padding:0px;
+background-color:#f4f4f4;
+font-family:Ariel,Helvetica,sans-serif;
+}
+
+header{
+	height:70px;
+}
+.heading
+{
+height:5px;
+box-sizing:border-box;
+padding:1px 0px 20px 60px;
+background-color:gray;
+color:#ffffff;
+text-shadow:4px 2px 6px black;
+}
+.highlight
+{
+	color:brown;
+}
+.title  p{
+	position:relative;
+	left:90px;
+	bottom:20px;
+	color:black;
+	font-weight:bold;
+	text-shadow:none;
+}
+
+.heading nav ul li a{
+	text-decoration:none;
+	color:#ffffff;
+	
+	
+}
+header li{
+	float:left;
+	display:inline;
+	padding:0 30px 0 30px;
+	position:relative;
+	bottom:20px;
+	
+}
+
+.tagline{
+	position:relative;
+	bottom:500px;
+text-align:center;
+font-size:100px;
+color:black;
+text-shadow:10px 10px 16px white;
+}
+.tagline p{
+font-size:20px;
+font-weight:bold;
+position:relative;
+left:200px
+}
+
+
+.year img,.mid_3 img,.mid_4 img
+{
+	
+	position:relative;
+	top:100px;
+	margin-top:30px;
+	border-style:outset;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	height:800px;
+	width:100%;
+	vertical-align:middle;
+	
+}
+
+
+.bgwhite{
+margin:auto;
+display:block;
+height:1000px;	
+background-color:white;
+width:80%;
+box-shadow:3px 3px 2px 2px grey;
+
+}
+.bgwhite1{
+	
+margin:auto;
+display:block;
+height:1000px;	
+background-color:white;
+width:60%;
+box-shadow:3px 3px 2px 2px grey;
+
+
+
+}
+.year_sec,.mid_3,.mid_4{
+	margin-left:auto;
+	margin-right:auto;
+	height:800px;
+	width:80%;
+}
+
+.year span a{
+text-decoration:none;
+color:white;
+font-size:30px;
+	}
+
+
+.year span,.mid_3 span,.mid_4 span{
+position:relative;
+bottom:560px;
+margin:auto;
+width:40%;
+display:block;
+font-size:50px;
+text-shadow:4px 4px 6px black;
+color:white;
+font-weight:bold;
+border:5px ridge white;
+text-align:center;
+background-color:rgb(0,0,0);
+background-color:rgba(0,0,0, 0.6);
+padding:10px;
+}
+.text{
+	 font-size:20px;margin:30px;;padding:30px;text-indent:50px;
+}
+
+.footer_sec
+{
+	padding:30px;
+	background-color:black;
+	box-shadow:4px 4px 4px white;
+	text-align:center;
+	height:200px;
+	width:100%;
+	vertical-align:middle;
+	display:inline-block;
+	line-height:1.5;
+	font-size:25px;
+	color:gray;
+}
+
+table tr td a
+{
+	text-decoration:none;
+	color:white;
+}
+
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(113,0,0);
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: rgb(228,228,228);
+  color: black;
+  padding: 12px 12px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  
+  
+  
+}
+
+/* Style the layout of the form */
+.layout {
+  
+  border-radius: 5px;
+  background-color: #c4dfe6;
+  padding: 12px;
+  margin-right:20%;
+  margin-left:20%;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 2px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 2px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+  .col-25, .col-75, input[type=submit], p.para1 {
+    width: 100%;
+    margin-top: 0;
+  }
+
+p.para1{
+font-family:"cooper black";
+font-style:bold;
+color:black;
+background-color: rgb(255,153,104);
+border-style:groove;
+border-color:black;
+border-width:2px;
+margin-right:400px;
+line-height:1.5em;
+HEIGHT:50PX;
+cursor:crosshair;
+}
+form {
+  border: 3px solid #f1f1f1;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid ;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  opacity: 0.8;
+}
+.can_btn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #c4dfe6;
+   border-radius: 4px;
+   box-sizing: border-box;
+}
+.class1{
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  padding: 16px;
+ text-align: center;
+ border: 30px groove #a7414a;
+  
+
+
+
+}
+span.psw {
+	border-radius: 4px;
+  float: right;
+  padding-top: 16px;
+  
+}
+  span.psw {
+    display: block;
+    float: none;
+  }
+ 
+.layout1{
+margin-left:15%;
+margin-right:15%;
+}
+.text{
+	-moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.img4{
+	max-height: 15px;
+      max-width: 20px;
+     width: 12px;
+     height: 12px;
+	 margin-right: 70%; 
+}
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 2px;
+ 
+  text-decoration: none;
+  height: 2px:
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 20px;
+  text-align: middle;
+  margin-left: 50%;
+  margin-right: 105%;
+  box-shadow: 10px 10px 10px gray;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+   border-radius: 20px;
+   margin-left: 140%;
+  margin-right: 25%;
+  box-shadow: 10px 10px 10px gray;
+} 
+.size_form{
+	margin-right:50%;
+}
+
+
+
+ 
+
+
+
+
+
